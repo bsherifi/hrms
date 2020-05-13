@@ -7,7 +7,6 @@
 
 <script>
 import DashboardVue from './components/Dashboard.vue'
-import axios from 'axios'
 export default {
   components:{
     'dashboard': DashboardVue
