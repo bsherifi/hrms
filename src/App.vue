@@ -1,16 +1,29 @@
 <template>
   <div id="app">
+    <dashboard></dashboard>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import DashboardVue from './components/Dashboard.vue'
+import axios from 'axios'
 export default {
+  components:{
+    'dashboard': DashboardVue
+  },
   data() {
     return {
+    
 
     }
-  }
+  
+  },
+  mounted() {
+    axios.get('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => console.log(response));
+  },
+
 }
 </script>
 
